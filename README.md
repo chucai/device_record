@@ -3,6 +3,3 @@
 这些信息一般都来自与产品的运营数据。
 
 ##实现技术
-1, sinatra: framework web
-2, redis: store datas
-3, rspec: test 
