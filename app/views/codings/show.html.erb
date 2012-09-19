@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Device:</b>
+  <%= @coding.device %>
+</p>
+
+<p>
+  <b>Rom:</b>
+  <%= @coding.rom_id %>
+</p>
+
+<p>
+  <b>Client:</b>
+  <%= @coding.client %>
+</p>
+
+<p>
+  <b>Encode mode:</b>
+  <%= @coding.encode_mode %>
+</p>
+
+
+<%= link_to 'Edit', edit_coding_path(@coding) %> |
+<%= link_to 'Back', codings_path %>

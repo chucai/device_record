@@ -1,0 +1,29 @@
+<h1>Listing codings</h1>
+
+<table>
+  <tr>
+    <th>Device</th>
+    <th>Rom</th>
+    <th>Client</th>
+    <th>Encode mode</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @codings.each do |coding| %>
+  <tr>
+    <td><%= coding.device %></td>
+    <td><%= coding.rom_id %></td>
+    <td><%= coding.client %></td>
+    <td><%= coding.encode_mode %></td>
+    <td><%= link_to 'Show', coding %></td>
+    <td><%= link_to 'Edit', edit_coding_path(coding) %></td>
+    <td><%= link_to 'Destroy', coding, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Coding', new_coding_path %>

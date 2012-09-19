@@ -1,0 +1,33 @@
+<%= form_for(@coding) do |f| %>
+  <% if @coding.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@coding.errors.count, "error") %> prohibited this coding from being saved:</h2>
+
+      <ul>
+      <% @coding.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :device %><br />
+    <%= f.text_field :device %>
+  </div>
+  <div class="field">
+    <%= f.label :rom_id %><br />
+    <%= f.text_field :rom_id %>
+  </div>
+  <div class="field">
+    <%= f.label :client %><br />
+    <%= f.select :client, [["Android", "ANDROID"], ["Iphone", "IPHONE"]] %>
+  </div>
+  <div class="field">
+    <%= f.label :encode_mode %><br />
+    <%= f.number_field :encode_mode %>
+  </div>
+  <div class="actions">
+    <%= f.submit  "Submit", :class => "btn btn-primary"  %>
+  </div>
+<% end %>
